@@ -1,41 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karam's Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body class="flex flex-col min-h-screen bg-blue-400 text-white text-center h-[2600px]">
-    <header>
+<body class="flex flex-col min-h-screen bg-blue-400 text-white text-center h-[2600px]"> <!-- Blue was the main color because it represents trustworthiness and godd quality -->
+    <nav class="w-[100%] mt-[15px] bg-gray-500 border-[5px] border-black md:flex flex-row justify-around"> <!-- Different navbar depending on screen size -->
         <h1 class="text-4xl font-bold">Karam Abbas</h1>
-        <nav class="w-[100%] mt-[15px] bg-gray-500 border-[5px] border-black">
-            <ul>
-                <li class="flex justify-evenly underline"><a href="">About</a><a href="">Services</a><a href="">More</a></li>
+        <section>
+             <ul>
+                <li class="flex justify-evenly underline"><a class="md:m-[0.7em]" href="">About</a><a class="md:m-[0.7em]" href="">Services</a><a class="md:m-[0.7em]" href="">More</a></li> <!-- Links and minor adjustments -->
             </ul>
-        </nav>
-    </header>
+        </section>
+    </nav>
 
     <main>
-        <img class="block mr-auto ml-auto p-[10px] m-[10px] w-[40%] bg-black" src="Images/image.jpg" alt="Image of me">
-
-        <section>
-            <h2 class="text-3xl font-bold m-[10px] p-[10px]">Introduction</h2>
-            <p class="bg-gray-500 border-[5px] border-black m-[5px] p-[5px]">Hello! My name is Karam Abbas, and this is my website. I am an aspiring website developer with a passion for coding. I don't do development as just a job, I also do it as a hobby. I have started coding at August of 2024. If you are looking for a person to help design your website, I will do it to the best of my abilities. You can also check out some other projects that I have done below.</p>
+        <section> <!-- Introduction to me -->
+            <img class="mr-auto ml-auto p-[10px] m-[10px] w-[35%] bg-black md:float-left" src="Images/image.jpg" alt="Image of me"> <!--Selfie-->
+                <h2 class="text-3xl font-bold m-[10px] p-[10px]">Introduction</h2>
+                <p class="bg-gray-500 border-[5px] border-black m-[5px] p-[5px] md: p-[15px]">Hello! My name is Karam Abbas, and this is my website. I am an aspiring website developer with a passion for coding. I don't do development as just a job, I also do it as a hobby. I have started coding at August of 2024. If you are looking for a person to help design your website, I will do it to the best of my abilities. You can also check out some other projects that I have done below.</p>
         </section>
 
-        <section>
-            <h2 class="text-3xl font-bold m-[10px] p-[10px] mt-[100px]">Projects I worked on</h2>
+        <section> <!-- Shows projects I have done in West-MEC (actual projects) -->
+            <h2 class="text-3xl font-bold m-[10px] p-[10px] mt-[100px] md:clear-left">Projects I worked on</h2>
             <div>   
                 <a href="https://karam-08.github.io/Tailwind-CSS-Introduction---Challenge-Assignment/"><img class="bg-gray-500 border-[5px] border-black m-[5px] p-[5px]" src="Images/desktop grid.png" alt="Project #1"></a>
                 <p>Profile Cards done in Tailwind CSS</p>
-                <br>
+                <br> <!-- Fun Fact: Originally there was going to be a slideshow, but I attempted to make it. It was too complicated for me so it was scrapped. -->
                 <br>
                 <a href="https://karam-08.github.io/Javascript-Web-Design--Video-Game/"><img class="bg-gray-500 border-[5px] border-black m-[5px] p-[5px]" src="Images/amogus.png" alt="Project #2"></a>
                 <p>Website built purely off of Javascript</p>
-                <br>
+                <br> <!-- I chose whatever github links worked for whatever project. -->
                 <br>
                 <a href="https://karam-08.github.io/Interactive-Website/"><img class="bg-gray-500 border-[5px] border-black m-[5px] p-[5px]" src="Images/interaction.png" alt="Project #3"></a>
                 <p>A website with buttons that interact with the HTML</p>
@@ -43,16 +40,20 @@
         </section>
 
 
-        <h2 class="text-3xl font-bold m-[10px] p-[10px] mt-[100px]">Get in Touch</h2>
-            <section class="border-[5px] border-double border-black" id="contact info">
-                <h3>First and Last name:</h3>
-                    <input class="bg-gray-500 border-[5px] border-black rounded-lg mb-[15px]" type="text">
-                <h3>Email:</h3>
-                    <input class="bg-gray-500 border-[5px] border-black rounded-lg mb-[15px]" type="text">
-                <h3>Phone Number:</h3>
-                    <input class="bg-gray-500 border-[5px] border-black rounded-lg mb-[15px]" type="text">
-                <h3>Message:</h3>
-                    <textarea class="bg-gray-500 border-[5px] border-black rounded-lg w-[400px] h-[150px]" type="text"></textarea>
+        <h2 class="text-3xl font-bold m-[10px] p-[10px] mt-[100px]">Get in Touch</h2> <!-- Contact form -->
+            <section class="border-[5px] border-double border-black md:flex justify-evenly" id="contact info">
+                <div>
+                    <h3>First and Last name:</h3>
+                        <input class="bg-gray-500 border-[5px] border-black rounded-lg mb-[15px]" type="text">
+                    <h3>Email:</h3>
+                        <input class="bg-gray-500 border-[5px] border-black rounded-lg mb-[15px]" type="text">
+                    <h3>Phone Number:</h3>
+                        <input class="bg-gray-500 border-[5px] border-black rounded-lg mb-[15px]" type="text">
+                </div>
+                <div>
+                    <h3>Message:</h3>
+                        <textarea class="bg-gray-500 border-[5px] border-black rounded-lg w-[500px] h-[180px]" type="text"></textarea> <!--Actual textbox with plenty of space-->
+                </div>
         </section>
     </main>
     <footer class="border-[5px] border-black mt-auto">
@@ -62,7 +63,7 @@
             <a class="underline" href="">Services</a>
             <br>
             <a class="underline" href="">More</a>
-        <img class="block mr-auto ml-auto p-[10px] m-[10px] w-[20%]" src="./Images/aperture.png" alt="logo">
+        <img class="block mr-auto ml-auto p-[10px] m-[10px] w-[20%]" src="./Images/aperture.png" alt="logo"> <!--I chose an Aperture because I thought it was cool.-->
     </footer>
 
 </body>
